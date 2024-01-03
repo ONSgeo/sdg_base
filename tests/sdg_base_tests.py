@@ -1,6 +1,5 @@
 from typing import Optional
 import unittest
-from unittest.mock import patch
 
 import pandas as pd
 import geopandas as gpd
