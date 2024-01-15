@@ -5,7 +5,7 @@ import pandas as pd
 import geopandas as gpd
 
 from src.sdg_base_src import SDGBase
-from ..user_params import UserParams
+from ..base_user_params import UserParams
 
 
 params: UserParams = UserParams()
