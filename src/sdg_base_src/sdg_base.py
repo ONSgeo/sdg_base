@@ -1,4 +1,4 @@
-from typing import List, Optional, Union 
+from typing import Dict, List, Optional, Union 
 from collections.abc import Callable
 from abc import ABC, abstractmethod
 import pandas as pd
@@ -227,7 +227,7 @@ class SDGBase(ABC):
         espg: int
             ESPG code of coordinate reference system used in files of interest.
         kwargs: Dict[str, str]
-            Key word arguments for the read 
+            Key word arguments for the read method
         Returns
         -------
         File: Union[pd.DataFrame, gpd.GeoDataFrame]
