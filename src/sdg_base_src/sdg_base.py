@@ -120,12 +120,12 @@ class SDGBase(ABC):
         """
             
         if input_data_dir is None:
-            self._input_data_dir = f'{self._root_dir}/data/{self._sdg_name}_data'
+            self._input_data_dir = f'{self._root_dir}/{self._sdg_name}_data'
         else:
             self._input_data_dir = input_data_dir
             
         if output_data_dir is None:
-            self._output_data_dir = f'{self._root_dir}/outputs/{self._sdg_name}_output'
+            self._output_data_dir = f'{self._root_dir}/{self._sdg_name}_output'
         else:
             self._output_data_dir = output_data_dir
             
@@ -232,6 +232,8 @@ class SDGBase(ABC):
         -------
         File: Union[pd.DataFrame, gpd.GeoDataFrame]
         """
+        if not kwargs:
+            kwargs = {}
         ext: str = file_path.split('.')[-1]
         read_func = self._get_read_function(ext)
         df: Union[pd.DataFrame, gpd.GeoDataFrame] = read_func(file_path, **kwargs)
