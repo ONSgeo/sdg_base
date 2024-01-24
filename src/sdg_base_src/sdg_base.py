@@ -206,7 +206,14 @@ class SDGBase(ABC):
         return data_read_dict[ext]
     
     
-    def load_data(self, file_path: str, cols: Optional[List[str]] = None, index: Optional[str] = None, epsg: int = 27700) -> Union[pd.DataFrame, gpd.GeoDataFrame]:
+    def load_data(
+            self, 
+            file_path: str, 
+            cols: Optional[List[str]] = None, 
+            index: Optional[str] = None, 
+            epsg: int = 27700,
+            kwargs: Optional[Dict[str, str]] = None
+        ) -> Union[pd.DataFrame, gpd.GeoDataFrame]:
         """Joins and loads data of interest as a data frame.
 
         Parameters
@@ -219,14 +226,15 @@ class SDGBase(ABC):
             Selects column of interest.
         espg: int
             ESPG code of coordinate reference system used in files of interest.
-
+        kwargs: Dict[str, str]
+            Key word arguments for the read 
         Returns
         -------
         File: Union[pd.DataFrame, gpd.GeoDataFrame]
         """
         ext: str = file_path.split('.')[-1]
         read_func = self._get_read_function(ext)
-        df: Union[pd.DataFrame, gpd.GeoDataFrame] = read_func(file_path)
+        df: Union[pd.DataFrame, gpd.GeoDataFrame] = read_func(file_path, **kwargs)
         df.columns = df.columns.str.lower()
         if cols:
             df = df[cols]
