@@ -236,6 +236,7 @@ class SDGBase(ABC):
         read_func = self._get_read_function(ext)
         df: Union[pd.DataFrame, gpd.GeoDataFrame] = read_func(file_path, **kwargs)
         df.columns = df.columns.str.lower()
+        df.columns = df.columns.str.strip()
         if cols:
             df = df[cols]
         if index:
