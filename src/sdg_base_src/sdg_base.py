@@ -164,16 +164,16 @@ class SDGBase(ABC):
         
         
     def get_ext_files(self, inp_folder: str, ext: str, search_string: Optional[str] = None) -> List[str]:
-        """Retrieves input files.
+        """Retrieves input files by extension with optional file name filtering.
 
         Parameters
         ----------
         inp_folder: str
             Folder containing input data of interest.
         ext: str
-            The extension being searched for
+            Files must have this extension
         search_string: Optional[str]
-            Searches for keyword(s) within folder of interest.
+            File names must contain this string
 
         Returns
         -------
@@ -215,16 +215,16 @@ class SDGBase(ABC):
             epsg: int = 27700,
             kwargs: Optional[Dict[str, str]] = None
         ) -> Union[pd.DataFrame, gpd.GeoDataFrame]:
-        """Joins and loads data of interest as a data frame.
+        """Joins and loads data as a data frame.
 
         Parameters
         ----------
         file_path: str
             Location of files of interest.
         cols: List[str]
-            List of column names.
+            Only return columns in this list.
         index: str
-            Selects column of interest.
+            Set index to this column
         espg: int
             ESPG code of coordinate reference system used in files of interest.
         kwargs: Dict[str, str]
@@ -257,9 +257,9 @@ class SDGBase(ABC):
         Parameters
         ----------
         file: Union[pd.DataFrame, gpd.DataFrame]
-            Data of interest
+            Data to save
         file_name: str
-            Name of file containing output data of interest.
+            Name for saved file.
 
         Returns
         -------
