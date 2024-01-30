@@ -4,7 +4,7 @@ This base class contains common functionality required for the calculation of SD
 
 # Set up instructions
 
-If re-running an existing SDG calculator with new input data:
+## If re-running an existing SDG calculator with new input data:
 
 1. Clone the repository of the calculator into your local folder.
  
@@ -16,8 +16,19 @@ If re-running an existing SDG calculator with new input data:
 ```git submodule update```
 
 
-If creating a new SDG calculator:
 
+
+
+## If creating a new SDG calculator:
+
+This can be achieved easily using the template repository to create your repo. 
+
+See here for instructions: {link to creating from template}
+
+See here for template repository: {link to template repo}
+
+
+#### Structure of template
 The expected file structure for an SDG project is as follows:
 ```
 sdg-x-x-x
@@ -36,9 +47,11 @@ sdg-x-x-x
 +-- .gitmodules
 +-- pyproject.toml
 +-- README.md
++-- Calculate_SDGx_x_x.ipynb
 +-- user_params.py
 ```
-  
+
+#### These steps are only necessary if you haven't used the template to create your repository
 1. Set up submodule go to the sdg_x_x_x_src folder in your file tree (e.g. sdg_11_3_1_src) in git bash within the local project directory. Run the following command:
  
 ```git submodule add https://github.com/ONSgeo/sdg_base.git```
@@ -52,4 +65,17 @@ to set up this submodule, go to the sdg_x_x_x_src folder (e.g. sdg_11_3_1_src) i
 this adds the submodule to the sdg project that you're developing. You can then use the features of the base class project as if they're local files from within the project.
 
 # Further Reading
+
+## Methods offered by the base class:
+- `set_input_data_dir()` Sets directory and creates folders from which data is input.
+- `get_input_data_dir()` returns main directory in which data is stored.
+- `set_output_data_dir()` sets directory and creates folders for data outputs.
+- `get_output_data_dir()` Returns directory in which outputs are stored.
+- `set_file_tree()` Sets file tree for input and output data.
+- `create_folders()` Creates folders to store output data.
+- `get_ext_files()` Retrieves input files by extension with optional file name filtering.
+- `_get_read_function()` Returns the relevent read method based on the input extension.
+- `load_data()` Joins and loads data as a data frame.
+- `save_data()` Saves data as .csv or .shp, dependent on dataframe.
+- `calculate_sdg()` Abstract method, this must be implemented in the SDG subclasses
 
