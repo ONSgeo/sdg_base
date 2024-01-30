@@ -1,4 +1,4 @@
-This repository houses the base class for SDG projects. Calculations of individual SDGs are done in other repositories that inherit this one as a git submodule. 
+This repository houses the base class for projects that calculate Sustainable Development Goals (SDGs). SDGs are measures of The 2030 Adgenda for Sustainable DevelopmentCalculations of individual SDGs are done in other repositories that inherit this one as a git submodule. 
 
 See below for set up details:
 
