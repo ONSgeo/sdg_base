@@ -67,6 +67,7 @@ this adds the submodule to the sdg project that you're developing. You can then 
 # Further Reading
 
 ## Methods offered by the base class:
+These are accessible to all classes that inherit from it
 - `set_input_data_dir()` Sets directory and creates folders from which data is input.
 - `get_input_data_dir()` returns main directory in which data is stored.
 - `set_output_data_dir()` sets directory and creates folders for data outputs.
