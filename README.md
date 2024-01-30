@@ -23,9 +23,9 @@ This base class contains common functionality required for the calculation of SD
 
 This can be achieved easily using the template repository to create your repo. 
 
-See here for instructions: {link to creating from template}
+[See here for instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
 
-See here for template repository: {link to template repo}
+[See here for template repository](https://github.com/ONSgeo/sdg_template)
 
 
 #### Structure of template
