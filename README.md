@@ -1,4 +1,5 @@
 This repository houses the base class for projects that calculate progress towards meeting Sustainable Development Goals (SDGs). SDGs are measures of The 2030 Adgenda for Sustainable Development, adopted by the United Nations (UN) in 2015. There are 17 goals and 169 targets that encompass themes such as equality, climate action, and energy and infrastructure. The timely reporting of progress towards meeting SDGs by UN member states is of importance in achieving a sustainable global future: as such, this SDG base class has been created to provide a template from which calculations of individual SDG indicators can be automated.  
+
 This base class contains common functionality required for the calculation of SDG indictors; this includes setting a root directory from which to work on a local machine, importing input data and exporting results. It is inherited as a git submodule into other repositories that calculate individual SDG indicators. 
 
 # Set up instructions
@@ -8,8 +9,12 @@ If re-running an existing SDG calculator with new input data:
 1. Clone the repository of the calculator into your local folder.
  
 2. Open git BASH and run the following two commands:
+
+
 ```git submodule init```
+
 ```git submodule update```
+
 
 If creating a new SDG calculator:
 
