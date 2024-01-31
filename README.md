@@ -1,6 +1,16 @@
-This repository houses the base class for projects that calculate progress towards meeting Sustainable Development Goals (SDGs). SDGs are measures of The 2030 Adgenda for Sustainable Development, adopted by the United Nations (UN) in 2015. There are 17 goals and 169 targets that encompass themes such as equality, climate action, and energy and infrastructure. The timely reporting of progress towards meeting SDGs by UN member states is of importance in achieving a sustainable global future: as such, this SDG base class has been created to provide a template from which calculations of individual SDG indicators can be automated.  
+# Introduction
 
-This base class contains common functionality required for the calculation of SDG indictors; this includes setting a root directory from which to work on a local machine, importing input data and exporting results. It is inherited as a git submodule into other repositories that calculate individual SDG indicators. 
+[The Sustainable Development Goals (SDGs)](https://sdgs.un.org/goals) are part of the UN 2030 Agenda for Sustainable Development. The Office for National Statistics (ONS) reports the UK data for the SDG indicators on the [UK SDG data webpage](https://sdgdata.gov.uk/), contributing to progress towards a sustainable global future.
+
+In total, there are 17 Sustainable Development Goals and 169 indicators be be reported covering themes such as equality, climate action, and energy and infrastructure. This code provides a base class with methods for a [standardised template](https://github.com/ONSgeo/sdg_template) that supports the automated calculation of SDG indicators to assist in the timely reporting of progress towards sustainable development. 
+
+## Scope
+
+The methods of this base class provide common functionality applicable to the calulation of SDG indicators, such as inputting data and exporting results. This promotes reuse of code to avoid duplication of work.
+
+This class is inherited into the template for SDG indicators using a git submodule found in the src folder. Scripts for the calculation of individual SDG indicators built from this template will inherit the these methods and attributes allowing for the quick development of individual SDG indicator calculations as required.
+
+Changes made to the base class will also apply to the other SDGs. **Modifications to the base class should as such only be considered if they are also applicable to the calculation of other SDG indicators**. 
 
 # Set up instructions
 
@@ -14,10 +24,6 @@ This base class contains common functionality required for the calculation of SD
 ```git submodule init```
 
 ```git submodule update```
-
-
-
-
 
 ## If creating a new SDG calculator:
 
@@ -64,9 +70,7 @@ to set up this submodule, go to the sdg_x_x_x_src folder (e.g. sdg_11_3_1_src) i
 
 this adds the submodule to the sdg project that you're developing. You can then use the features of the base class project as if they're local files from within the project.
 
-# Further Reading
-
-## Methods offered by the base class:
+# Methods offered by the base class:
 These are accessible to all classes that inherit from it
 - `set_input_data_dir()` Sets directory and creates folders from which data is input.
 - `get_input_data_dir()` returns main directory in which data is stored.
