@@ -48,6 +48,7 @@ sdg-x-x-x
 | | +-- sdg_x_x_x.py
 +-- tests
 | +-- __init__.py
+| +-- test_sdg_x_x_x.py
 +-- .env
 +-- .gitignore
 +-- .gitmodules
