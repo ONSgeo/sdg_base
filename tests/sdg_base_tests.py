@@ -4,7 +4,7 @@ import unittest
 import pandas as pd
 import geopandas as gpd
 
-from src.sdg_base_src import SDGBase
+from base_src.sdg_base_src import SDGBase
 from base_user_params import UserParams
 
 
