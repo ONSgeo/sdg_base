@@ -8,7 +8,7 @@ In total, there are 17 Sustainable Development Goals and 169 indicators to be re
 
 The methods of this base class provide common functionality applicable to the calculation of all SDG indicators, such as inputting data and exporting results. This promotes reuse of code to avoid the duplication of work.
 
-This class is inherited into the [template for SDG indicators] (https://github.com/ONSgeo/sdg_template) using a [git submodule]( https://git-scm.com/book/en/v2/Git-Tools-Submodules) located in the src folder. Scripts for the calculation of individual SDG indicators built from this template will inherit these methods and attributes allowing for the quick development of individual SDG indicator calculations as required.
+This class is inherited into the [template for SDG indicators](https://github.com/ONSgeo/sdg_template) using a [git submodule]( https://git-scm.com/book/en/v2/Git-Tools-Submodules) located in the src folder. Scripts for the calculation of individual SDG indicators built from this template will inherit these methods and attributes allowing for the quick development of individual SDG indicator calculations as required.
 
 Changes made to the base class will also apply to the other SDGs. **Modifications to the base class should as such only be considered if they are also applicable to the calculation of other SDG indicators**. 
 
