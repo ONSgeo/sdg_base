@@ -1,8 +1,9 @@
 """SDGs"""
 
-from .sdg_base import SDGBase
 from typing import List
 
+from .sdg_base import SDGBase
+
 __all__: List[str] = [
-    "SDGBase", 
+    "SDGBase",
 ]
