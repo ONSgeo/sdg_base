@@ -39,6 +39,7 @@ This can be achieved easily using the template repository to create your repo:
 ### Structure of template
 
 The expected file structure for an SDG project is as follows:
+
   ```
   sdg-x-x-x
   +-- .github
