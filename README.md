@@ -13,7 +13,7 @@ This class is inherited into the [template for SDG indicators](https://github.co
 Changes made to the base class will also apply to the other SDGs. **Modifications to the base class should as such only be considered if they are also applicable to the calculation of other SDG indicators**. 
 
 
-## Set-up instructions
+## Set-up and usage
 
 
 ### If re-running an existing SDG calculator with new input data:
