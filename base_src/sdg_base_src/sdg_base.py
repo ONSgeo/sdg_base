@@ -213,6 +213,7 @@ class SDGBase(ABC):
         data_read_dict = {
             "csv": pd.read_csv,
             "shp": gpd.read_file,
+            "gpkg": gpd.read_file,
             "xls": pd.read_excel,
             "xlsx": pd.read_excel,
         }
