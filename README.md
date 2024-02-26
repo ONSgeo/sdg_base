@@ -1,6 +1,6 @@
 # Introduction
 
-[The Sustainable Development Goals (SDGs)](https://sdgs.un.org/goals) are part of the UN 2030 Agenda for Sustainable Development. The Office for National Statistics (ONS) reports the UK data for the SDG indicators on the [UK SDG data webpage](https://sdgdata.gov.uk/), contributing to progress towards a sustainable global future.
+[The Sustainable Development Goals (SDGs)](https://sdgs.un.org/goals) are part of the UN 2030 Agenda for Sustainable Development. The Office for National Statistics (ONS) reports some of the UK data for the SDG indicators on the [UK SDG data webpage](https://sdgdata.gov.uk/), contributing to progress towards a sustainable global future.
 
 In total, there are 17 Sustainable Development Goals and 169 indicators to be reported, covering themes such as equality, climate action, and energy and infrastructure. This code provides a base class with methods that form a [standardised template](https://github.com/ONSgeo/sdg_template) that supports the automated calculation of SDG indicators to assist in the timely reporting of progress towards sustainable development. 
 
